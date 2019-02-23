@@ -1,0 +1,12 @@
+---
+applications:
+- name: pcfredishcache
+  path: target\pcfredishcache-0.0.1-SNAPSHOT.jar
+  memory: 768M
+  instances: 1
+  random-route: true
+  services:
+  - config-server
+  - Redis
+  buildpacks:
+  - https://github.com/cloudfoundry/java-buildpack.git
